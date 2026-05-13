@@ -2,6 +2,8 @@
 require("dotenv").config();
 // Express
 const express = require("express");
+// bcrypt
+const bcrypt = require("bcrypt");
 const app = express();
 //Middleware
 app.use(express.json());
@@ -20,6 +22,7 @@ async function dbConnection() {
     }
 }
 dbConnection();
+const User = require("./models/User");
 //Listen
 app.listen(port, () =>{
     console.log(`Server Is Running At Port ${port}`);
