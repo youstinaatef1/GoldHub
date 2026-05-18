@@ -25,7 +25,9 @@ dbConnection();
 const User = require("./models/User");
 const Product = require("./models/Product");
 const authRoutes = require("./routes/authRoutes");
+const productRoutes = require("./routes/productRoutes");
 app.use("/api", authRoutes);
+app.use("/api", productRoutes);
 //Listen
 app.listen(port, () =>{
     console.log(`Server Is Running At Port ${port}`);
