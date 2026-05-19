@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 const app = express();
 //Middleware
 app.use(express.json());
+app.use("/uploads", express.static("uploads"));
 //Port
 const port = process.env.PORT || 3000;
 //MONGOOSE

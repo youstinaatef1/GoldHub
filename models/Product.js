@@ -30,12 +30,11 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    images:[ 
+    images: 
     {
-        type: String,
+        type: [String],
         required: true
-    }
-    ],
+    },
     stock:{
         type: Number,
         default: 1
@@ -44,11 +43,11 @@ const productSchema = new mongoose.Schema({
         type: Boolean,
         default: true
     },
-    shop:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Shop",
-        required: true
-    },
+    // shop:{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: "Shop",
+    //     required: true
+    // },
     createdBy:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
