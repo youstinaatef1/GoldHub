@@ -36,4 +36,15 @@ const createProduct = async(req, res) => {
    });
     }
 }
-module.exports = {createProduct};
+const getAllProducts = async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ msg: "Server Error" });
+  }
+};
+module.exports = {
+    createProduct,
+    getAllProducts
+};
