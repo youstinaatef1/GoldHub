@@ -19,3 +19,14 @@
     background-color: var(--main-color);
     border: none;
 }
+.sign:hover{
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+.linkP{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.linkP:hover{
+    color: var(--hover-color);
+}

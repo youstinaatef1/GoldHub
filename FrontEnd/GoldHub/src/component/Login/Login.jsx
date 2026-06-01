@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Login.module.css";
@@ -58,7 +59,9 @@ function Login() {
         <button className={`${styles.sign} btn btn-primary w-100`} type="submit">
           Sign In
         </button>
-
+<p className='text-center mt-3'>
+  Don't have an account? <Link to="/register" className={styles.linkP}>Register</Link>
+</p>
       </form>
     </div>
   );

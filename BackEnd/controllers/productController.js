@@ -44,7 +44,84 @@ const getAllProducts = async (req, res) => {
     res.status(500).json({ msg: "Server Error" });
   }
 };
+const updateProduct = async (req, res) => {
+    try {
+
+        const { productId } = req.params;
+
+        const {
+            productName,
+            description,
+            price,
+            category,
+            karat,
+            weight,
+            images,
+            stock,
+            isAvailable
+        } = req.body;
+
+        const product = await Product.findByIdAndUpdate(
+            productId,
+            {
+                productName,
+                description,
+                price,
+                category,
+                karat,
+                weight,
+                images,
+                stock,
+                isAvailable
+            },
+            {
+                new: true,
+                runValidators: true
+            }
+        );
+        res.status(200).json({
+            msg: "Product Updated Successfully",
+            data: product
+        });
+    } catch (error) {
+        res.status(500).json({
+            msg: error.message
+        });
+    }
+};
+const deleteProduct = async(req, res) => {
+    try {
+        const userRole = req.user.role;
+        if (userRole !== "admin" && userRole !== "seller") {
+            return res.status(403).json({
+                msg: "Access Denied: Only Admin or Seller can delete Products"
+            });
+        }
+        const product = await Product.findByIdAndDelete(req.params.id);
+        if (!product) {
+            return res.status(404).json({
+                msg: "Product Not Found"
+            });  
+        }
+        res.status(200).json({
+            msg: "Product deleted Successfully"
+        });
+    } catch (error) {
+        console.error(error);
+        if (error.kind === "ObjectId") {
+      return res.status(400).json({
+        msg: "Invalid Product ID",
+      });
+    }
+    res.status(500).json({
+      msg: "Server Error",
+    });
+    }
+}
+
 module.exports = {
     createProduct,
-    getAllProducts
+    getAllProducts,
+    updateProduct,
+    deleteProduct
 };

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import styles from "./Register.module.css";
 
 function Register() {
@@ -106,13 +106,13 @@ function Register() {
           >
             <option value="user">User</option>
             <option value="seller">Seller</option>
-            <option value="admin">Admin</option>
+            {/* <option value="admin">Admin</option> */}
           </select>
         </div>
 
         {/* Button */}
         <button
-          className="btn btn-primary w-100"
+          className={`${styles.sign} btn btn-primary w-100`}
           type="submit"
           disabled={isSubmitting}
         >
@@ -124,6 +124,9 @@ function Register() {
             {message}
           </div>
         )}
+        <p className="text-center mt-3">
+  Already have an account? <Link to="/" className={styles.linkP}>Login</Link>
+</p>
       </form>
     </div>
   );
