@@ -118,10 +118,35 @@ const deleteProduct = async(req, res) => {
     });
     }
 }
+const addImagesToProduct = async(req, res) => {
+    try {
+        const product = await Product.findById(req.params.id);
+        if(!product){
+            return res.status(404).json({
+                msg: "Product Not Found"
+            });
+        }
+        // new images
+        const newImages = req.files.map(file => file.path);
+        // push new image to old images
+        product.images.push(...newImages);
+        await product.save();
+        res.status(200).json({
+            msg: "Images added Successfully",
+            product
+        });
+    } catch (error) {
+          console.error(error);
 
+      res.status(500).json({
+         msg: "Server Error"
+      });
+    }
+}
 module.exports = {
     createProduct,
     getAllProducts,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    addImagesToProduct
 };
