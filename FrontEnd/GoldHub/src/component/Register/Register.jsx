@@ -40,7 +40,7 @@ function Register() {
         setMessage(data.message || "Registration failed");
       } else {
         console.log(data);
-        navigate("/dashboard");
+        // navigate("/dashboard");
       }
     } catch (error) {
       console.error(error);

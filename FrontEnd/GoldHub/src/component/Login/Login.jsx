@@ -8,16 +8,12 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault();
-
-    
-    console.log({ email, password });
-
- 
-    navigate("/dashboard");
+    e.preventDefault();   
+    // console.log({ email, password });
+    // navigate("/dashboard");
   };
 
   return (

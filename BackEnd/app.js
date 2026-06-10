@@ -25,6 +25,7 @@ async function dbConnection() {
 dbConnection();
 const User = require("./models/User");
 const Product = require("./models/Product");
+const Shop = require("./models/Shop");
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
 app.use("/api", authRoutes);
