@@ -1,12 +1,13 @@
 // Call Mongoose
 const mongoose = require("mongoose");
-const { type } = require("../controllers/validation/registerSchema");
-const { required } = require("joi");
+// const { type } = require("../controllers/validation/registerSchema");
+// const { required } = require("joi");
 // Create Schema
 const shopSchema = new mongoose.Schema({
     shopName: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     logo: {
         type: String,
@@ -14,16 +15,24 @@ const shopSchema = new mongoose.Schema({
     },
     location: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     phoneNumber: {
         type: Number,
         required: true
     },
     workingHours: {
-        from: String,
-        to: String,
-        required: true
+
+        from: {
+            type: String,
+            required: true
+        },
+
+        to: {
+            type: String,
+            required: true
+        }
     },
     goldPrice: {
         type: Number
