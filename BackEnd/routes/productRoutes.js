@@ -4,8 +4,8 @@ const {createProduct, getAllProducts, updateProduct, deleteProduct, addImagesToP
 const authMiddleware = require("../Middleware/authMiddleware");
 const uploadImage = require("../Middleware/uploadimages");
 router.post("/products", authMiddleware, uploadImage, createProduct);
-router.get("/products",  getAllProducts);
-router.put("/:productId", updateProduct);
-router.delete("/:id", authMiddleware, deleteProduct);
-router.put("/:id/images", uploadImage, addImagesToProduct);
-module.exports =router;
+router.get("/products", getAllProducts);
+router.put("/products/:productId", authMiddleware, updateProduct);
+router.delete("/products/:id", authMiddleware, deleteProduct);
+router.put("/products/:id/images", uploadImage, addImagesToProduct);
+module.exports = router;

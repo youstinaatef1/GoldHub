@@ -46,44 +46,57 @@ const getAllProducts = async (req, res) => {
 };
 const updateProduct = async (req, res) => {
     try {
-
         const { productId } = req.params;
 
-        const {
-            productName,
-            description,
-            price,
-            category,
-            karat,
-            weight,
-            images,
-            stock,
-            isAvailable
-        } = req.body;
+        const updateData = {};
+        const fields = [
+            "productName",
+            "description",
+            "price",
+            "category",
+            "karat",
+            "weight",
+            "images",
+            "stock",
+            "isAvailable"
+        ];
+
+        fields.forEach((field) => {
+            if (req.body[field] !== undefined) {
+                updateData[field] = req.body[field];
+            }
+        });
+
+        if (Object.keys(updateData).length === 0) {
+            return res.status(400).json({ msg: "No update fields provided" });
+        }
 
         const product = await Product.findByIdAndUpdate(
             productId,
-            {
-                productName,
-                description,
-                price,
-                category,
-                karat,
-                weight,
-                images,
-                stock,
-                isAvailable
-            },
+            updateData,
             {
                 new: true,
                 runValidators: true
             }
         );
+
+        if (!product) {
+            return res.status(404).json({
+                msg: "Product Not Found"
+            });
+        }
+
         res.status(200).json({
             msg: "Product Updated Successfully",
             data: product
         });
     } catch (error) {
+        console.error(error);
+        if (error.kind === "ObjectId" || error.name === "CastError") {
+            return res.status(400).json({
+                msg: "Invalid Product ID"
+            });
+        }
         res.status(500).json({
             msg: error.message
         });

@@ -48,9 +48,7 @@ const getAllShops = async (req, res) => {
 };
 const updateShop = async (req, res) => {
     try {
-
         const { shopId } = req.params;
-
         const {
             shopName,
             location,
