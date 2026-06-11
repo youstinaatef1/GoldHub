@@ -28,8 +28,10 @@ const Product = require("./models/Product");
 const Shop = require("./models/Shop");
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
+const shopRoutes = require("./routes/shopRoutes");
 app.use("/api", authRoutes);
 app.use("/api", productRoutes);
+app.use("/api", shopRoutes);
 //Listen
 app.listen(port, () =>{
     console.log(`Server Is Running At Port ${port}`);

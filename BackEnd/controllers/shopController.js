@@ -33,5 +33,59 @@ try {
         error
     });
 }
-}
-module.exports = {createShop};
+};
+const getAllShops = async (req, res) => {
+    try {
+        const shops = await Shop.find();
+        res.json(shops);
+        // res.status(200).json({
+        //     msg: "All Shops",
+        //     data: shops
+        // });
+    } catch (error) {
+       res.status(500).json({ msg: "Server Error" });
+    }
+};
+const updateShop = async (req, res) => {
+    try {
+
+        const { shopId } = req.params;
+
+        const {
+            shopName,
+            location,
+            phoneNumber,
+            goldPrice,
+            isActive
+        } = req.body;
+
+        const shop = await Shop.findByIdAndUpdate(
+            shopId,
+            {
+                shopName,
+                location,
+                phoneNumber,
+                goldPrice,
+                isActive
+            },
+            {
+                new: true,
+                runValidators: true
+            }
+        );
+        res.status(200).json({
+            msg: "Shop Updated Successfully",
+            data: shop
+        });
+    } catch (error) {
+        res.status(500).json({
+            msg: error.message
+        });
+    }
+};
+
+module.exports = {
+    createShop,
+    getAllShops,
+    updateShop
+};
