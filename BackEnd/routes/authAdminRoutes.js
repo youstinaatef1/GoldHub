@@ -5,6 +5,6 @@ const router = express.Router();
 // Require Controller
 const loginController = require("../controllers/authAdmin.controller");
 // Init Method Request
-router.post("/loginA", loginController);
+router.post("/login", loginController);
 // Export
 module.exports = router;

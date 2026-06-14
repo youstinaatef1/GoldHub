@@ -32,11 +32,13 @@ const connectedDB = require("./config/db");
 connectedDB();
 const User = require("./models/User");
 const Product = require("./models/Product");
+const Admin = require("./models/Admin");
 const Shop = require("./models/Shop");
+const adminRoutes = require("./routes/authAdminRoutes");
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
 const shopRoutes = require("./routes/shopRoutes");
-const adminRoutes = require("./routes/authAdminRoutes");
+
 
 app.use("/api", authRoutes);
 app.use("/api", productRoutes);
