@@ -5,5 +5,5 @@ const authMiddleware = require("../Middleware/authMiddleware");
 const uploadLogo = require("../Middleware/uploadLogo");
 router.post("/shop", authMiddleware, uploadLogo, createShop);
 router.get("/allShops", getAllShops);
-router.put("/:shopId", updateShop);
+router.put("/:shopId", authMiddleware, updateShop);
 module.exports = router;
