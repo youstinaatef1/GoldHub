@@ -9,7 +9,7 @@ import TableDashboard from "../../component/Ui/TableDashboard/TableDashboard";
 import FormDashboard from "../../component/Ui/FormDashboard/FormDashboard";
 import ShopDashboard from "../../component/Dashboard/ShopDashboard/ShopDashboard";
 function Dashboard(){
-    const [isDraft, setIsDraft] = useState(false);
+   
     return(
         <>
         <Navbar adminName= "Youstina Atef"/>
@@ -22,7 +22,7 @@ function Dashboard(){
             {/* First Child */}
             <Route index element = {<TableDashboard />}/>
             {/* Second Child */}
-           <Route path="add" element = {<FormDashboard setIsDraft={setIsDraft}/>}/>
+           <Route path="add" element = {<FormDashboard />}/>
             </Route>
             {/* <Route path="/projects" element = {< Project />}/> */}
             <Route path="shopD" element = {<ShopDashboard />} />
