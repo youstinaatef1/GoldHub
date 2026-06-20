@@ -5,13 +5,9 @@ const express = require("express");
 // bcrypt
 const bcrypt = require("bcrypt");
 const morgan = require("morgan");
-const cors = require("cors");
+
 const app = express();
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+
 //Middleware
 app.use(express.json());
 if (process.env.NODE_ENV === "dev") {
