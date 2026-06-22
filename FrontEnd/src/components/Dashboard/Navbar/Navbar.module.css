@@ -1,0 +1,53 @@
+.navbar {
+  background-color: var(--white-color);
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.5rem 1.5rem;
+  height: 70px;
+}
+
+.logoImg {
+  height: 45px;
+  width: auto;
+}
+
+.adminSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatarCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.notifIcon {
+  color: var(--main-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.badge {
+  position: absolute;
+  background-color: var(--sideBar-color) !important;
+  top: -5px;
+  right: -5px;
+  font-size: 0.65rem;
+}
+.increase{
+    background-color: var(--secondary-color);
+    border: none;
+}
+.increase:hover{
+  background-color: var(--hover-color);
+  color: black;
+}
