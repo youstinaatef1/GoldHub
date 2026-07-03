@@ -1,0 +1,34 @@
+.tableWrapper{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.table th{
+    font-weight:600;
+    padding:18px;
+}
+
+.table td{
+    padding:18px;
+    vertical-align:middle;
+}
+
+.table tbody tr:hover{
+    background:#fafafa;
+}
+
+.buttonNew{
+    background-color: var(--secondary-color);
+    border:none;
+}
+
+.buttonNew:hover{
+    background-color: var(--hover-color);
+    color: white;
+}
+
+img{
+    object-fit:cover;
+}

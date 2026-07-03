@@ -4,9 +4,9 @@ import styles from "./Status.module.css";
 function Status() {
    // layer 1 states & Global Data
    const [states, setStates] = useState([
-    {id: 1, count:120, title: "Shops", icon: <i class="fa-solid fa-shop"></i>},
-    {id: 2, count:12, title: "Products", icon: <i class="fa-solid fa-basket-shopping"></i>},
-    {id: 3, count:1200, title: "Users", icon: <i class="fa-solid fa-users"></i>},
+    {id: 1, count:120, title: "Shops", icon: <i className="fa-solid fa-shop"></i>},
+    {id: 2, count:12, title: "Products", icon: <i className="fa-solid fa-basket-shopping"></i>},
+    {id: 3, count:1200, title: "Users", icon: <i className="fa-solid fa-users"></i>},
     {id: 4, count:120, title: "Blogs", icon: <i className="fa-solid fa-blog"></i>}
    ]);
   // layer 2 (effects) API Call

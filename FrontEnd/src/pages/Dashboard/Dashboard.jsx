@@ -5,10 +5,11 @@ import Sidebar from "../../components/Dashboard/Sidebar/Sidebar";
 import DashboardHome from "./DashboardHome";
 import Users from "./User";
 import ShopDashboard from "../../components/ui/ShopDashboard/ShopDashboard";
-// import Projects from "./Projects";
+import ProductDashboard from "../../components/ui/ProductDashboard/ProductDashboard";
 import TableDashboard from "../../components/ui/TableDashboard/TableDashboard";
 import FormDashboard from "../../components/ui/FormDashboard/FormDashboard";
-
+import ShopForm from "../../components/ui/ShopForm/ShopForm";
+import ProductForm from "../../components/ui/ProductForm/ProductForm";
 const Dashboard = () => {
   return (
     <div className="dashboard-wrapper">
@@ -20,10 +21,16 @@ const Dashboard = () => {
         <main className="flex-grow-1 p-4">
           <Routes>
             <Route path="home" element={<DashboardHome />} />
+            <Route path="shops" element={<ShopDashboard />} />
+            <Route path="shops/add" element={<ShopForm />} />
+            <Route path="products" element={<ProductDashboard />} />
+            <Route path="products/add" element={<ProductForm />} />
             <Route path="users" element={<Users />}>
               <Route index element={<TableDashboard />} />
               <Route path="add" element={<FormDashboard />} />
             </Route>
+              
+
             {/* <Route path="projects" element={<Projects />} /> */}
           </Routes>
         </main>

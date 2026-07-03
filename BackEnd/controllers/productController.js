@@ -62,21 +62,36 @@ const getAllProducts = async (req, res) => {
 const updateProduct = async (req, res) => {
     try {
         const { productId } = req.params;
+        // 1. Get user
         const user = await User.findById(req.user.id);
-         if (!user) {
+        if (!user) {
             return res.status(404).json({
                 msg: "User Not Found"
             });
         }
-        // Check Role
+        // 2. Check role
         if (user.role !== "seller") {
             return res.status(403).json({
                 msg: "You are not allowed to update product"
             });
         }
-        const shopU = await Shop.findById(shopId);
-        
-         if (
+        // 3. Get product
+        const product = await Product.findById(productId);
+
+        if (!product) {
+            return res.status(404).json({
+                msg: "Product Not Found"
+            });
+        }
+        // 4. Get shop from product
+        const shopU = await Shop.findById(product.shop);
+        if (!shopU) {
+            return res.status(404).json({
+                msg: "Shop Not Found"
+            });
+        }
+        // 5. Authorization check (important)
+        if (
             user.role === "seller" &&
             shopU.owner.toString() !== user._id.toString()
         ) {
@@ -84,6 +99,7 @@ const updateProduct = async (req, res) => {
                 msg: "You can update only your shop"
             });
         }
+        // 6. Build update data
         const updateData = {};
         const fields = [
             "productName",
@@ -96,18 +112,18 @@ const updateProduct = async (req, res) => {
             "stock",
             "isAvailable"
         ];
-
         fields.forEach((field) => {
             if (req.body[field] !== undefined) {
                 updateData[field] = req.body[field];
             }
         });
-
         if (Object.keys(updateData).length === 0) {
-            return res.status(400).json({ msg: "No update fields provided" });
+            return res.status(400).json({
+                msg: "No update fields provided"
+            });
         }
-
-        const product = await Product.findByIdAndUpdate(
+        // 7. Update product
+        const updatedProduct = await Product.findByIdAndUpdate(
             productId,
             updateData,
             {
@@ -115,16 +131,10 @@ const updateProduct = async (req, res) => {
                 runValidators: true
             }
         );
-
-        if (!product) {
-            return res.status(404).json({
-                msg: "Product Not Found"
-            });
-        }
-
-        res.status(200).json({
+        // 8. Response
+        return res.status(200).json({
             msg: "Product Updated Successfully",
-            data: product
+            data: updatedProduct
         });
     } catch (error) {
         console.error(error);
@@ -133,7 +143,7 @@ const updateProduct = async (req, res) => {
                 msg: "Invalid Product ID"
             });
         }
-        res.status(500).json({
+        return res.status(500).json({
             msg: error.message
         });
     }

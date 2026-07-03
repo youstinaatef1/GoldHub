@@ -27,16 +27,16 @@ const shopSchema = new mongoose.Schema({
         required: true
     },
 
-    // workingHours: {
-    //     from: {
-    //         type: String,
-    //         required: true
-    //     },
-    //     to: {
-    //         type: String,
-    //         required: true
-    //     }
-    // },
+    workingHours: {
+        from: {
+            type: String,
+            required: true
+        },
+        to: {
+            type: String,
+            required: true
+        }
+    },
 
     goldPrice: {
         type: Number

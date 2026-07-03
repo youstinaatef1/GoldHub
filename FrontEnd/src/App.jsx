@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import LoginDashboard from "./components/Dashboard/LoginDashboard/LoginDashboard";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<LoginDashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

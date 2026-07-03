@@ -1,0 +1,38 @@
+.tableWrapper {
+    background-color: var(--white-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.table thead {
+    background-color: var(--primary-color);
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 18px;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 18px;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 49, 94, 0.04);
+}
+
+img {
+    object-fit: cover;
+}
+.buttonNew {
+  background-color: var(--secondary-color) !important;
+  border: none !important;
+}
+
+.buttonNew:hover {
+  background-color: var(--hover-color) !important;
+  color: var(--text-color) !important;
+}

@@ -25,7 +25,7 @@ function TableDashboard() {
     <div className="container py-4">
       <div className="d-flex align-items-center justify-content-between mb-3">
         <h5 className="mb-0 fw-semibold">Users List</h5>
-        <Link to="add" className="btn btn-primary btn-sm">
+        <Link to="add" className={`${styles.buttonNew} btn btn-primary btn-sm`}>
           Add New User
         </Link>
       </div>
