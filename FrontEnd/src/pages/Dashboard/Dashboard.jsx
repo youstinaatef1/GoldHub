@@ -4,6 +4,7 @@ import Navbar from "../../components/Dashboard/Navbar/Navbar";
 import Sidebar from "../../components/Dashboard/Sidebar/Sidebar";
 import DashboardHome from "./DashboardHome";
 import Users from "./User";
+import ProductsDashboard from "../../components/ui/ProductDashboard/ProductDashboard";
 import ShopDashboard from "../../components/ui/ShopDashboard/ShopDashboard";
 // import Projects from "./Projects";
 import TableDashboard from "../../components/ui/TableDashboard/TableDashboard";
@@ -23,6 +24,7 @@ const Dashboard = () => {
             <Route path="users" element={<Users />}>
               <Route index element={<TableDashboard />} />
               <Route path="add" element={<FormDashboard />} />
+              <Route index element={<ProductsDashboard />} />
             </Route>
             {/* <Route path="projects" element={<Projects />} /> */}
           </Routes>

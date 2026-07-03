@@ -14,7 +14,7 @@ const Sidebar = () => {
     {
       icon: "fa-basket-shopping",
       text: "Product Management",
-      path: "/",
+      path: "/dashboard/products",
     },
     { icon: "fa-globe", text: "Website CMS", path: "/cms" },
     { icon: "fa-comments", text: "Live Chat", path: "/chat" },
