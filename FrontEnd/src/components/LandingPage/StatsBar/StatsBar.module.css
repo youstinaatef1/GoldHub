@@ -1,0 +1,67 @@
+.barContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--soft_surface-color);
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin: 30px auto;
+  width: 100%;
+  /* max-width: 1100px; */
+  gap: 20px;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 180px;
+}
+
+/* تنسيق الأيقونة */
+.iconLink {
+  font-size: 32px;
+  color: var(--text-color); /* اللون المعتمد للموقع */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.statBox:hover .iconLink {
+  transform: translateY(-5px);
+  color: var(--accent-color);
+}
+
+/* تنسيق الأرقام */
+.numberLink {
+  text-decoration: none;
+}
+
+.number {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 5px 0;
+}
+
+/* تنسيق النص التوضيحي */
+.labelLink {
+  text-decoration: none;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--text_secondary-color);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* تجاوب مع الهواتف الذكية */
+@media (max-width: 768px) {
+  .barContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

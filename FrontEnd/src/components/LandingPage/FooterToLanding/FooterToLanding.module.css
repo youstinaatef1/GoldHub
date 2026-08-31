@@ -1,0 +1,138 @@
+.footer {
+  background: var(--whit-color);
+  padding-top: 40px;
+  border-top: 1px solid var(--accent-color);
+}
+
+.title {
+  color: var(--text-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  
+}
+
+.line {
+  width: 130px;
+  height: 3px;
+  background: var(--secondary-color);
+  border: none;
+  margin: 10px 0 20px;
+}
+
+.smallLine {
+  width: 70px;
+  height: 3px;
+  background: var(--secondary-color);
+  border: none;
+  margin: 10px 0 20px;
+}
+
+.aboutText {
+  color: var(--text-color);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 15px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: var(--accent-color);
+}
+
+.register {
+  border-top: 1px solid var(--border-color);
+  margin-top: 20px;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.register h5 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.button {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text_secondary-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: var(--secondary-color);
+  color: var(--whit-color);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.social a {
+  color: var(--secondary-color);
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  transform: translateY(-5px);
+  color: var(--text-color);
+}
+
+.copy {
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+}
+.footerRow {
+  align-items: flex-start;
+}
+
+:global(html[dir="rtl"]) .footerRow {
+  direction: rtl;
+}
+
+:global(html[dir="ltr"]) .footerRow {
+  direction: ltr;
+}
+.footerCol {
+  display: flex;
+  flex-direction: column;
+}
+
+:global(html[dir="rtl"]) .footerCol {
+  text-align: right;
+  align-items: flex-start;
+}
+
+:global(html[dir="ltr"]) .footerCol {
+  text-align: left;
+  align-items: flex-start;
+}
