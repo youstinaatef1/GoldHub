@@ -88,7 +88,10 @@ export default function LandingPage() {
           </h3>
 
           <p className={styles.infoParagraph}>
-            GoldHub is your premier digital destination for exquisite, high-end gold jewelry. Blending ancient heritage with modern minimalism, we craft timeless statement pieces, bespoke rings, and gemstone-adorned jewelry from authentic 18K and 21K gold. Elevate your everyday elegance with certified craftsmanship designed to last a lifetime.
+            GoldHub is your premier digital destination for exquisite, high-end gold jewelry.
+             Blending ancient heritage with modern minimalism, we craft timeless statement pieces,
+              bespoke rings, and gemstone-adorned jewelry from authentic 18K and 21K gold. 
+              Elevate your everyday elegance with certified craftsmanship designed to last a lifetime.
           </p>
 
         </div>
