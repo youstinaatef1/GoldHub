@@ -26,7 +26,7 @@ const Navbar = ({ adminName = "Super Admin", adminImg }) => {
             {notifCount}
           </span>
         </div>
-        <button className={`${styles.increase} btn btn-primary`} onClick={onIncNotifHandler}>Increase Notification</button>
+        {/* <button className={`${styles.increase} btn btn-primary`} onClick={onIncNotifHandler}>Increase Notification</button> */}
 
         <div className="d-flex align-items-center gap-2">
           <span className="fw-semibold d-none d-md-block">{adminName}</span>

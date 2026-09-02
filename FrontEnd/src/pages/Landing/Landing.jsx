@@ -6,12 +6,12 @@ import Footer from "../../components/LandingPage/FooterToLanding/FooterToLanding
 import StatsBar from "../../components/LandingPage/StatsBar/StatsBar";
 import LegalFeatures from "../../components/LandingPage/LegalFeatures/LegalFeatures";
 
-import heroImage1 from "../../assets/pexels-karola-g-7876050.jpg";
-import heroImage2 from "../../assets/pexels-ekaterina-bolovtsova-6077520.jpg";
-// import heroImage3 from "../../assets/photo-1701790644702-292e25180524.avif";
-import heroImage4 from "../../assets/pexels-karola-g-7875949.jpg"
+import heroImage1 from "../../assets/pexels-michael-steinberg-95604-342942.jpg";
+import heroImage2 from "../../assets/pexels-sheilabox-235376934-12320900.jpg";
+import heroImage3 from "../../assets/Gemini_Generated_Image_31q88i31q88i31q8.jpg";
+import heroImage4 from "../../assets/pexels-alleksana-7248760.jpg"
 
-import infoImg from "../../assets/licensed-image (1).jpeg";
+import infoImg from "../../assets/Gemini_Generated_Image_py52iepy52iepy52.jpg";
 import infoImg2 from "../../assets/licensed-image (2).jpeg";
 import infoImg3 from "../../assets/licensed-image (3).jpeg";
 
@@ -27,7 +27,7 @@ export default function LandingPage() {
   const heroImages = [
     heroImage1,
     heroImage2,
-    // heroImage3,
+    heroImage3,
     heroImage4
   ];
 
