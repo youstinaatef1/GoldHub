@@ -62,7 +62,7 @@ export default function LandingPage() {
 
         <img
           src={heroImages[currentImage]}
-          alt="LawBridge Hero"
+          alt="GoldHub Hero"
           className={styles.heroImage}
         />
 
@@ -78,17 +78,17 @@ export default function LandingPage() {
         <img
           className={styles.infoImg}
           src={infoImg}
-          alt="LawBridge"
+          alt="GoldHub"
         />
 
         <div className={styles.infoText}>
 
           <h3 className={styles.infoTitle}>
-            "landing.hero.title"
+            GoldHub | Timeless Luxury, Redefined
           </h3>
 
           <p className={styles.infoParagraph}>
-            "landing.hero.description"
+            GoldHub is your premier digital destination for exquisite, high-end gold jewelry. Blending ancient heritage with modern minimalism, we craft timeless statement pieces, bespoke rings, and gemstone-adorned jewelry from authentic 18K and 21K gold. Elevate your everyday elegance with certified craftsmanship designed to last a lifetime.
           </p>
 
         </div>
