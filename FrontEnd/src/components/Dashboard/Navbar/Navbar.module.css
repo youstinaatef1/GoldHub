@@ -1,15 +1,38 @@
 .navbar {
-  background-color: var(--white-color);
+  background-color: var(--white-color, #ffffff);
   border-bottom: 1px solid #dee2e6;
   padding: 0.5rem 1.5rem;
   height: 70px;
+  position: relative;
+  z-index: 1000;
 }
 
 .logoImg {
-  height: 70px;
+  height: 60px;
   width: auto;
+  object-fit: contain;
 }
 
+/* Nav links styling */
+.navButton {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navButton:hover {
+  color: var(--main-color);
+}
+
+
+
+/* Admin Section */
 .adminSection {
   display: flex;
   align-items: center;
@@ -20,34 +43,74 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color, #6c757d);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 1.1rem;
+  object-fit: cover;
+}
+
+/* Notifications */
+.notificationWrapper {
+  position: relative;
 }
 
 .notifIcon {
-  color: var(--main-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-    position: relative;
+  color: var(--main-color, #333333);
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
 }
 
 .badge {
   position: absolute;
-  background-color: var(--sideBar-color) !important;
-  top: -5px;
-  right: -5px;
+  background-color: var(--sideBar-color, #0dcaf0) !important;
+  top: -2px;
+  right: -2px;
   font-size: 0.65rem;
 }
-.increase{
-    background-color: var(--secondary-color);
-    border: none;
+
+.notificationDropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: -20px;
+  width: 320px;
+  max-height: 420px;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 12px;
+  z-index: 1050;
 }
-.increase:hover{
-  background-color: var(--hover-color);
+
+.notificationList {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* Scrollbar styling for notification list */
+.notificationList::-webkit-scrollbar {
+  width: 5px;
+}
+.notificationList::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.increase {
+  background-color: var(--secondary-color, #6c757d);
+  border: none;
+}
+
+.increase:hover {
+  background-color: var(--hover-color, #5a6268);
   color: black;
 }

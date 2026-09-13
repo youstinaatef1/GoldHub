@@ -12,8 +12,8 @@ import heroImage3 from "../../assets/Gemini_Generated_Image_31q88i31q88i31q8.jpg
 import heroImage4 from "../../assets/pexels-alleksana-7248760.jpg"
 
 import infoImg from "../../assets/Gemini_Generated_Image_py52iepy52iepy52.jpg";
-import infoImg2 from "../../assets/licensed-image (2).jpeg";
-import infoImg3 from "../../assets/licensed-image (3).jpeg";
+// import infoImg2 from "../../assets/licensed-image (2).jpeg";
+// import infoImg3 from "../../assets/licensed-image (3).jpeg";
 
 import styles from "./Landing.module.css";
 
@@ -119,11 +119,11 @@ export default function LandingPage() {
 
         </div>
 
-        <img
+        {/* <img
           className={styles.infoImg2}
           src={infoImg2}
           alt="Trust"
-        />
+        /> */}
 
       </section>
 
@@ -134,11 +134,11 @@ export default function LandingPage() {
 
       <section className={styles.infoSection}>
 
-        <img
+        {/* <img
           className={styles.infoImg}
           src={infoImg3}
           alt="Technology"
-        />
+        /> */}
 
         <div className={styles.infoText}>
 
