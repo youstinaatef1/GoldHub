@@ -17,6 +17,7 @@ import infoImg from "../../assets/Gemini_Generated_Image_py52iepy52iepy52.jpg";
 import HeroSearch from "../../components/HeroSearch/HeroSearch";
 import Categories from "../../components/Categories/Categories";
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
+import FeaturedShops from "../../components/FeaturedShops/FeaturedShops";
 import styles from "./Landing.module.css";
 
 export default function LandingPage() {
@@ -103,6 +104,7 @@ export default function LandingPage() {
       <HeroSearch />
       <Categories />
       <FeaturedProducts />
+      <FeaturedShops />
 
       {/* =========================
           Statistics

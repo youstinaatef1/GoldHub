@@ -126,3 +126,41 @@ export const mockProducts = [
     }
   }
 ];
+export const mockShops = [
+  {
+    _id: "shop_01",
+    name: "Al Noor Gold & Jewelry",
+    logo: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=300&q=80",
+    location: "Aswan City Center",
+    workingHours: "10:00 AM - 10:00 PM",
+    rating: 4.9,
+    productsCount: 42
+  },
+  {
+    _id: "shop_02",
+    name: "El-Mawardi Jewelry",
+    logo: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=300&q=80",
+    location: "Zamalek, Cairo",
+    workingHours: "11:00 AM - 11:00 PM",
+    rating: 4.8,
+    productsCount: 65
+  },
+  {
+    _id: "shop_03",
+    name: "Damas Luxury",
+    logo: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=300&q=80",
+    location: "Korba, Heliopolis",
+    workingHours: "10:30 AM - 10:30 PM",
+    rating: 5.0,
+    productsCount: 88
+  },
+  {
+    _id: "shop_04",
+    name: "L'azurde Boutique",
+    logo: "https://images.unsplash.com/photo-1611591475883-8a306c7e289f?auto=format&fit=crop&w=300&q=80",
+    location: "Mall of Arabia, Giza",
+    workingHours: "10:00 AM - 11:30 PM",
+    rating: 4.9,
+    productsCount: 110
+  }
+];
