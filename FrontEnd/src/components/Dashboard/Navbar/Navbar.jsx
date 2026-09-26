@@ -263,7 +263,7 @@ const Navbar = ({ adminName = "Super Admin", adminImg }) => {
             </button>
           </li>
         )}
-<li>
+{/* <li>
           <button
             type="button"
             onClick={handleAboutClick}
@@ -271,7 +271,7 @@ const Navbar = ({ adminName = "Super Admin", adminImg }) => {
           >
             Categories
           </button>
-        </li>
+        </li> */}
         <li>
           <button
             type="button"

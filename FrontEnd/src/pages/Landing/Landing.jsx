@@ -14,7 +14,9 @@ import heroImage4 from "../../assets/pexels-alleksana-7248760.jpg"
 import infoImg from "../../assets/Gemini_Generated_Image_py52iepy52iepy52.jpg";
 // import infoImg2 from "../../assets/licensed-image (2).jpeg";
 // import infoImg3 from "../../assets/licensed-image (3).jpeg";
-
+import HeroSearch from "../../components/HeroSearch/HeroSearch";
+import Categories from "../../components/Categories/Categories";
+import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 import styles from "./Landing.module.css";
 
 export default function LandingPage() {
@@ -98,62 +100,9 @@ export default function LandingPage() {
 
       </section>
 
-
-      {/* =========================
-          Section 2
-      ========================= */}
-
-      <section
-        className={`${styles.infoSection} ${styles.infoSectionAlt}`}
-      >
-
-        <div className={styles.infoText}>
-
-          <h3 className={styles.infoTitle}>
-            "landing.trust.title"
-          </h3>
-
-          <p className={styles.infoParagraph}>
-            "landing.trust.description"
-          </p>
-
-        </div>
-
-        {/* <img
-          className={styles.infoImg2}
-          src={infoImg2}
-          alt="Trust"
-        /> */}
-
-      </section>
-
-
-      {/* =========================
-          Section 3
-      ========================= */}
-
-      <section className={styles.infoSection}>
-
-        {/* <img
-          className={styles.infoImg}
-          src={infoImg3}
-          alt="Technology"
-        /> */}
-
-        <div className={styles.infoText}>
-
-          <h3 className={styles.infoTitle}>
-            "landing.technology.title"
-          </h3>
-
-          <p className={styles.infoParagraph}>
-            "landing.technology.description"
-          </p>
-
-        </div>
-
-      </section>
-
+      <HeroSearch />
+      <Categories />
+      <FeaturedProducts />
 
       {/* =========================
           Statistics
