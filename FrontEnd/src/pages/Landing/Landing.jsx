@@ -15,9 +15,13 @@ import infoImg from "../../assets/Gemini_Generated_Image_py52iepy52iepy52.jpg";
 // import infoImg2 from "../../assets/licensed-image (2).jpeg";
 // import infoImg3 from "../../assets/licensed-image (3).jpeg";
 import HeroSearch from "../../components/HeroSearch/HeroSearch";
+import GoldPriceTracker from '../../components/GoldPriceTracker/GoldPriceTracker';
 import Categories from "../../components/Categories/Categories";
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 import FeaturedShops from "../../components/FeaturedShops/FeaturedShops";
+import HowGoldHubWorks from "../../components/HowGoldHubWorks/HowGoldHubWorks";
+import AboutSection from "../../components/AboutSection/AboutSection";
+import CallToAction from "../../components/CallToAction/CallToAction";
 import styles from "./Landing.module.css";
 
 export default function LandingPage() {
@@ -102,42 +106,13 @@ export default function LandingPage() {
       </section>
 
       <HeroSearch />
+      <GoldPriceTracker />
       <Categories />
       <FeaturedProducts />
       <FeaturedShops />
-
-      {/* =========================
-          Statistics
-      ========================= */}
-
-      <StatsBar />
-
-
-      {/* =========================
-          About
-      ========================= */}
-
-      <section
-        className={styles.aboutSection}
-        id="about"
-      >
-
-        <div className={styles.aboutHeader}>
-
-          <h2>
-            "landing.about.title"
-          </h2>
-
-          <p>
-            "landing.about.description"
-          </p>
-
-        </div>
-
-        <LegalFeatures />
-
-      </section>
-
+      <HowGoldHubWorks />  
+      <AboutSection />
+      <CallToAction />
 
       <Footer />
 

@@ -164,3 +164,13 @@ export const mockShops = [
     productsCount: 110
   }
 ];
+
+export const mockGoldPrices = {
+  lastUpdated: "Today, 02:30 PM",
+  currency: "EGP/g",
+  prices: [
+    { karat: "18K", price: 3120, change: "+15", isPositive: true },
+    { karat: "21K", price: 3640, change: "+20", isPositive: true },
+    { karat: "24K", price: 4160, change: "+25", isPositive: true },
+  ]
+};

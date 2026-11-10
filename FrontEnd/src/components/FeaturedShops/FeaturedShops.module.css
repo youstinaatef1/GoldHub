@@ -4,7 +4,7 @@
 }
 
 .sectionBadge {
-  color: #D4AF37;
+  color: var(--main-color);
   font-size: 0.85rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -13,7 +13,7 @@
 }
 
 .sectionTitle {
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 2.1rem;
   font-weight: 700;
   margin-top: 0.4rem;
@@ -23,13 +23,13 @@
 .accentLine {
   width: 45px;
   height: 2px;
-  background-color: #D4AF37;
+  background-color: var(--main-color);
   margin-top: 0.75rem;
 }
 
 .viewAllBtn {
   background: transparent;
-  color: #D4AF37;
+  color: var(--main-color);
   border: none;
   font-size: 0.95rem;
   font-weight: 600;
@@ -40,7 +40,7 @@
 }
 
 .viewAllBtn:hover {
-  border-color: #D4AF37;
+  border-color: var(--main-color);
   transform: translateX(4px);
 }
 
@@ -60,7 +60,7 @@
 
 .shopCard:hover {
   transform: translateY(-6px);
-  border-color: #D4AF37;
+  border-color: var(--main-color);
   box-shadow: 0 14px 28px rgba(212, 175, 55, 0.12);
 }
 
@@ -76,7 +76,7 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #D4AF37;
+  border: 2px solid var(--main-color);
   padding: 2px;
   background-color: #000;
 }
@@ -85,7 +85,7 @@
   position: absolute;
   bottom: -4px;
   right: -6px;
-  background: #D4AF37;
+  background: var(--secondary-color);
   color: #000;
   font-size: 0.7rem;
   font-weight: 700;
@@ -94,7 +94,7 @@
 }
 
 .shopName {
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -118,7 +118,7 @@
 }
 
 .metaItem i {
-  color: #D4AF37;
+  color: var(--main-color);
   font-size: 0.85rem;
 }
 
@@ -133,8 +133,8 @@
 
 .viewShopBtn {
   background: transparent;
-  color: #D4AF37;
-  border: 1px solid #D4AF37;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
   padding: 0.6rem 1rem;
   border-radius: 6px;
   font-weight: 600;
@@ -144,6 +144,6 @@
 }
 
 .viewShopBtn:hover {
-  background: #D4AF37;
+  background: var(--secondary-color);
   color: #000;
 }

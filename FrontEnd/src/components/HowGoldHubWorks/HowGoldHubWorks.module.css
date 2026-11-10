@@ -1,0 +1,134 @@
+
+.howItWorks {
+  padding: 90px 24px;
+  background: #faf9f6;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--secondary-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+.subtitle {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.step {
+  position: relative;
+  padding: 32px 24px;
+  border: 1px solid #e9e2d1;
+  border-radius: 14px;
+  background: var(--white-color);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #f7f0df;
+}
+
+.icon {
+  color: var(--secondary-color);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.number {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.step h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.step p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: -28px;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+  font-size: 24px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .howItWorks {
+    padding: 65px 18px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .step {
+    padding: 28px 20px;
+  }
+
+  .arrow {
+    display: none;
+  }
+}

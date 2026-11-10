@@ -1,0 +1,131 @@
+.aboutWrapper {
+  background-color: #0b0b0b;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.contentBox {
+  background: radial-gradient(circle at top left, #161616 0%, #0d0d0d 100%);
+  border: 1px solid #1f1f1f;
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+}
+
+.tagline {
+  color: #D4AF37;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+  font-family: 'Playfair Display', serif, sans-serif;
+}
+
+.accentLine {
+  width: 45px;
+  height: 2px;
+  background-color: #D4AF37;
+  margin: 0.8rem 0 1.5rem;
+}
+
+.description {
+  color: #c4c4c4;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.highlightItem i {
+  color: #D4AF37;
+  font-size: 1.1rem;
+}
+
+.learnMoreBtn {
+  background: transparent;
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  padding: 0.75rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.learnMoreBtn:hover {
+  background-color: #D4AF37;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.learnMoreBtn i {
+  transition: transform 0.3s ease;
+}
+
+.learnMoreBtn:hover i {
+  transform: translateX(4px);
+}
+
+/* Card Visual */
+.visualCard {
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 2.5rem 1.8rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.goldEmblem {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1);
+  color: #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1.2rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.cardText {
+  color: #888888;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
